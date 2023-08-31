@@ -1,2 +1,2 @@
 #!/bin/bash
-chmpd u-* g-* o+* hello
+chmod u-*, g-*, o+* hello
