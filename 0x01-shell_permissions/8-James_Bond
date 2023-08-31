@@ -1,2 +1,2 @@
 #!/bin/bash
-chmpd ugo+* hello
+chmpd u-* g-* o+* hello
