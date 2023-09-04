@@ -1,0 +1,2 @@
+#!/bin/bash
+rep -o -i bin /etc/passwd | wc -l
