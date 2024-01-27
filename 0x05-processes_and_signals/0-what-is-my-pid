@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# this is a cript that print its own pid
+echo $$
