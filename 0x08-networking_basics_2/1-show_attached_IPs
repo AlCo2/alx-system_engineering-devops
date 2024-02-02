@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# bash script that get all ipv4 ip in the machine
+
+ip -4 -o addr show | awk '{print $4}' | cut -d "/" -f 1
