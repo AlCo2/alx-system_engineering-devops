@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# install and set up nginx server
+echo "making latest updates..."
+sudo apt update
+echo "Update Done succesfuly"
+echo "install nginx..."
+sudo apt install nginx
+echo "Done installing nginx"
+echo "starting nginx..."
+sudo service nginx start
+echo "delete default html files"
+sudo rm /var/www/html/*.html
+echo "adding our own html file"
+sudo echo "Hello World!" > /var/www/html/index.html
+echo "restarting server..."
+sudo service nginx restart
+echo "Done"
