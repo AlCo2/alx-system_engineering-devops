@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# remove password and connect using school
+Host *
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/school
