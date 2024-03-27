@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# init a hello world apache server
+service apache start
