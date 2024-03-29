@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # set up a load balencer to responde to user
-#sudo apt update
-#sudo apt install haproxy
+sudo apt update
+sudo apt install haproxy
 server_config=\
 "
 
