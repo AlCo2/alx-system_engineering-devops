@@ -1,0 +1,23 @@
+What happens when you type https://www.google.com in your browser and press Enter?
+Firstly, let’s take a look at the address : https://www.google.com
+Its consist of 3 important parts
+https: Internet protocol
+www: sub domain
+google.com: root domain(parent domain)
+All this combination its a name to identify the address (numerical label such as 192.168.1.1) of a web server (an actual computer), basically every computer with the access to the internet have a unique address.
+
+1- after typing https://www.google.com in our favorite browser (Chrome, Firefox…) we send a request contain that address to the browser.
+
+2- the browser gets our request then separate https://www.google.com from the protocol(https: the secure way to browse the internet) and make a request contain the hostname (www.google.com) to a DNS server(a server used to match the hostnames with the address numbers)
+
+3- the DNS server gets the request from the browser, then its navigate through their database(think of it as a dictionary of hostnames with their addresses), when the server found www.google.com = 34.224.63.179, the DNS server make a response to the browser with that number “34.224.63.179”.
+
+4- After receiving the response, the browser take the number of the response, and make a request to the address “34.224.63.179”(google server).
+
+At this point, we actually didn’t make a request to google server, but we made a request to a load balancer server (load balancer is a server used to handle huge amounts of traffics), Millions of users make requests every day, and 1 server can’t handle all those requests, that’s why big companies as google have thousands of servers, and load balancer is the distributor to those servers.
+
+5- the load balancer (34.224.63.179) receives our request with millions of other requests from other users at the same time then its distribute each request to a separate Google server as the picture shows:
+ 
+And finally google server receives our request and understand what we want, then its send a response to our browser with google page, and the browser shows us the page.
+ 
+Everything happened in less than a second.
